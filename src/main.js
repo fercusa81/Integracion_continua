@@ -4,7 +4,7 @@ const api = axios.create({
         'Content-Type': 'application/json;charset=utf-8',
     },
     params: {
-        'api_key': API_KEY,
+        'api_key': 'f8dafd591bdd003b5986f62cc6256e90',
     }
 });
 
@@ -13,7 +13,7 @@ async function getTrendingMoviesPreview() {
     const movies = data.results;
     trendingMoviesPreviewList.innerHTML = "";
     movies.forEach(movie => {
-        
+
         const movieContainer = document.createElement('div');
         movieContainer.classList.add('movie-container');
         const movieImg = document.createElement('img');
@@ -31,7 +31,7 @@ async function getCategoriesPreview() {
     const categories = data.genres;
     categoriesPreviewList.innerHTML = "";
     categories.forEach(category => {
-        
+
         const categoryContainer = document.createElement('div');
         categoryContainer.classList.add('category-container');
         const categoryTitle = document.createElement('h3');
@@ -57,7 +57,7 @@ async function getMoviesByCategory(id) {
     const movies = data.results;
     genericSection.innerHTML = "";
     movies.forEach(movie => {
-        
+
         const movieContainer = document.createElement('div');
         movieContainer.classList.add('movie-container');
         const movieImg = document.createElement('img');
